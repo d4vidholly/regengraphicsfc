@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+}
+
+header {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    margin: 0;
+}
+
+h3   {
+    margin: 5px;
+}
+
+nav {
+    background: #f1f1f1;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+img {
+    max-width: 400px;
+        display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0645ad;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 5px;
+}
+
+footer {
+    background: #f8f9fa;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    font-size: 0.9em;
+}
+
+#personal-info h2 {
+    font-size: 16px;
+    text-align: center;
+    background-color: #B0C4DE;
+    color: black;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+#personal-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#personal-info td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    vertical-align: top;
+}
+
+#personal-info td:first-child {
+    font-weight: bold;
+    width: 50%;
+    background-color: #f9f9f9;
+}
+
+#career-statistics h2 {
+
+    padding: 8px;
+    border-radius: 4px;
+}
+
+#career-statistics table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#career-statistics th, 
+#career-statistics td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#career-statistics th {
+    background-color: #f2f2f2;
+}
+
+.accordion h2 {
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.accordion .icon {
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.accordion .icon.rotate {
+    transform: rotate(90deg);
+}
+
+.accordion .content {
+    display: none;
+    padding: 10px 0;
+}
+
+.accordion .content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.accordion th, 
+.accordion td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.accordion th {
+    background-color: #f2f2f2;
+}
+
+figure {
+    text-align: center;
+}
+
+
+figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 8px;
+}
+
+.image-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 10px;
+}
+
+.image-carousel figure {
+    flex: 0 0 100%;
+    text-align: center;
+    scroll-snap-align: center;
+}
+
+.image-carousel img {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 8px;
+}
+
+.image-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    padding: 10px;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.image-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.image-gallery figure {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    text-align: center;
+}
+
+.image-gallery img {
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 8px;
+}

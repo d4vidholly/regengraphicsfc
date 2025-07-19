@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia Styled Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Regen Graphics FC</h1>
+    </header>
+
+    
+
+
+    <main>
+        <section id="bio">
+
+            <h2>David Holly</h2>
+            <p>David Holly (born 3 October 1992) is a graphic designer and illustrator working with English football clubs at <a href="https://www.instagram.com/p/DMH_xr_PO1_/?utm_source=ig_web_button_share_sheet">Regen Graphics FC</a>. David loves football and is passionate about local grassroots sport, having made a handful of appearences in the Northern League.</p>
+            <p>David is working to climb the football pyramid by working with clubs in a variety of divisions and ultimately, represent his country England.</p>
+        </section>
+
+
+
+           <section id="personal-info">
+
+<div class="image-gallery">
+    <figure>
+        <img src="DHD5.png" alt="First image">
+        <figcaption>First image caption</figcaption>
+    </figure>
+
+    <figure>
+        <img src="Alnwick-fc.png" alt="Second image">
+        <figcaption>Second image caption</figcaption>
+    </figure>
+
+    <!-- Add more figures if needed -->
+</div>
+
+    <h2>Personal Information</h2>
+    <table>
+        <tr>
+            <td>Full name</td>
+            <td>David Holly</td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td>3 October 1992</td>
+        </tr>
+        <tr>
+            <td>Position(s)</td>
+            <td>Graphic Designer, Illustrator, Website Designer</td>
+        </tr>
+    </table>
+
+    <h2>Current Progress</h2>
+    <table>
+        <tr>
+            <td>Current Team</td>
+            <td>Free Agent</td>
+        </tr>
+        <tr>
+        <td>Current Level</td>
+        <td>N/A</td>
+        </tr>
+    </table>
+</section>
+
+             <section id="summary">
+            <p>David is looking to use his experience in the design industry to partner with football clubs to rise up through the football pyramid. David is currently offering social media graphics, programme artwork and illustrations at a discount rate for Step 6 teams.</p>
+        </section>
+
+        <section class="accordion">
+    <h2><span class="icon">▶</span> Club Career</h2>
+    <div class="content">
+        <h3>Pre-Season</h3>
+        <p>David began his journey in July 2025 by creating illustrations of Northern Premier League Division 2 teams, in Step 6 of the English Pyramid.</p>
+    </div>
+</section>
+
+<section class="accordion">
+    <h2><span class="icon">▶</span> Career Statistics</h2>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Club</th>
+                    <th>Division</th>
+                    <th>Contribution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="accordion">
+    <h2><span class="icon">▶</span>Achievements</h2>
+    <div class="content">
+        <h3>July 2025</h3>
+        <ul>
+            <li>Instagram Repost by Alnwick Town FC</li>
+            <li>Instagram Repost by Chester le Street Town FC</li>
+            <li>Followed by Boldon CA, Chester le Street Town and Yarm & Eaglescliffe FC</li>
+        </ul>
+    </div>
+</section>
+
+<section class="accordion">
+    <h2><span class="icon">▶</span> References</h2>
+    <div class="content">
+        <p>Come Back Later</p>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <p>Wikipedia content is available under CC BY-SA 3.0 unless otherwise noted.</p>
+    </footer>
+
+<script>
+document.querySelectorAll('.accordion h2').forEach(header => {
+    header.addEventListener('click', () => {
+        const icon = header.querySelector('.icon');
+        const content = header.nextElementSibling;
+
+        icon.classList.toggle('rotate');
+        content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+    });
+});
+
+const gallery = document.querySelector('.image-gallery');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+gallery.addEventListener('mousedown', (e) => {
+    isDown = true;
+    gallery.classList.add('active');
+    startX = e.pageX - gallery.offsetLeft;
+    scrollLeft = gallery.scrollLeft;
+});
+gallery.addEventListener('mouseleave', () => {
+    isDown = false;
+    gallery.classList.remove('active');
+});
+gallery.addEventListener('mouseup', () => {
+    isDown = false;
+    gallery.classList.remove('active');
+});
+gallery.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - gallery.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scroll speed
+    gallery.scrollLeft = scrollLeft - walk;
+});
+</script>
+
+
+</body>
+</html>
