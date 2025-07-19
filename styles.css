@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background: #fff;
-    color: #000;
+    color: #101418;
 }
 
 header {
@@ -16,6 +16,8 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 24px;
+    color: #555;
 }
 
 h3   {
@@ -32,7 +34,6 @@ img {
     max-width: 400px;
         display: block;
     margin: 0 auto;
-    margin-bottom: 20px;
 }
 
 nav ul {
@@ -238,4 +239,14 @@ figcaption {
     font-size: 0.9em;
     color: #555;
     margin-top: 8px;
+}
+
+.accordion h2 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.accordion .icon {
+    margin-right: 8px;
 }

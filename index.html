@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wikipedia Styled Page</title>
+    <title>Regen Graphics FC - WIkipedia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,12 +29,12 @@
 <div class="image-gallery">
     <figure>
         <img src="DHD5.png" alt="First image">
-        <figcaption>First image caption</figcaption>
+        <figcaption>David in a coffee shop in Melbourne, 2024.</figcaption>
     </figure>
 
     <figure>
         <img src="Alnwick-fc.png" alt="Second image">
-        <figcaption>Second image caption</figcaption>
+        <figcaption>Alnwick Town AFC design as part of Northern League Project, 2025</figcaption>
     </figure>
 
     <!-- Add more figures if needed -->
@@ -64,17 +64,17 @@
         </tr>
         <tr>
         <td>Current Level</td>
-        <td>N/A</td>
+        <td>Amateur</td>
         </tr>
     </table>
 </section>
 
              <section id="summary">
-            <p>David is looking to use his experience in the design industry to partner with football clubs to rise up through the football pyramid. David is currently offering social media graphics, programme artwork and illustrations at a discount rate for Step 6 teams.</p>
+            <p>David is looking to use his experience in the design industry to partner with football clubs to rise up through the football pyramid. David is currently offering social media graphics, programme artwork and illustrations at a discount rate for Step 9 and 10 clubs.</p>
         </section>
 
         <section class="accordion">
-    <h2><span class="icon">▶</span> Club Career</h2>
+    <h2><span class="icon"><img src="arrow-up.png"></span>Club Career</h2>
     <div class="content">
         <h3>Pre-Season</h3>
         <p>David began his journey in July 2025 by creating illustrations of Northern Premier League Division 2 teams, in Step 6 of the English Pyramid.</p>
@@ -82,7 +82,7 @@
 </section>
 
 <section class="accordion">
-    <h2><span class="icon">▶</span> Career Statistics</h2>
+    <h2><span class="icon"><img src="arrow-up.png"></span>Career Statistics</h2>
     <div class="content">
         <table>
             <thead>
@@ -104,11 +104,11 @@
 </section>
 
 <section class="accordion">
-    <h2><span class="icon">▶</span>Achievements</h2>
+    <h2><span class="icon"><img src="arrow-up.png"></span>Achievements</h2>
     <div class="content">
         <h3>July 2025</h3>
         <ul>
-            <li>Instagram Repost by Alnwick Town FC</li>
+            <li>Instagram Repost by <a href="https://en.wikipedia.org/wiki/Alnwick_Town_A.F.C.">Alnwick Town AFC</a></li>
             <li>Instagram Repost by Chester le Street Town FC</li>
             <li>Followed by Boldon CA, Chester le Street Town and Yarm & Eaglescliffe FC</li>
         </ul>
@@ -116,7 +116,7 @@
 </section>
 
 <section class="accordion">
-    <h2><span class="icon">▶</span> References</h2>
+    <h2><span class="icon"><img src="arrow-up.png"></span>References</h2>
     <div class="content">
         <p>Come Back Later</p>
     </div>
@@ -128,15 +128,6 @@
     </footer>
 
 <script>
-document.querySelectorAll('.accordion h2').forEach(header => {
-    header.addEventListener('click', () => {
-        const icon = header.querySelector('.icon');
-        const content = header.nextElementSibling;
-
-        icon.classList.toggle('rotate');
-        content.style.display = (content.style.display === 'block') ? 'none' : 'block';
-    });
-});
 
 const gallery = document.querySelector('.image-gallery');
 let isDown = false;
@@ -163,6 +154,23 @@ gallery.addEventListener('mousemove', (e) => {
     const x = e.pageX - gallery.offsetLeft;
     const walk = (x - startX) * 2; // Adjust scroll speed
     gallery.scrollLeft = scrollLeft - walk;
+});
+
+document.querySelectorAll('.accordion h2').forEach(header => {
+    header.addEventListener('click', () => {
+        const iconImg = header.querySelector('.icon img');
+        const content = header.nextElementSibling;
+
+        // Toggle content visibility
+        content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+
+        // Swap icon image
+        if (content.style.display === 'block') {
+            iconImg.src = 'arrow-down.png';
+        } else {
+            iconImg.src = 'arrow-up.png';
+        }
+    });
 });
 </script>
 
